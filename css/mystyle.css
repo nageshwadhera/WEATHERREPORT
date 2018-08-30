@@ -1,0 +1,104 @@
+.tabs
+{
+    border: 1px solid lightgray;
+    background-color: lightgrey;
+}
+.single_tab
+{
+    margin: 11px 0;
+    margin-left: 3%;
+}
+.single_tab li a
+{
+    padding: 8px 16px;
+}
+.weather1
+{
+    border-radius: 5px;
+    padding: 3%;
+
+    background-image: -webkit-gradient(linear,right bottom,left top,from(#168eea),to(#7abbec));
+    background-image: -webkit-linear-gradient(bottom right,#168eea,#7abbec);
+    background-image: linear-gradient(to top left,#168eea,#7abbec);
+    color: #333;
+}
+.weather_head
+{
+    margin-left: 10px;
+}
+.weather_head h2
+{
+    color: #333;
+}
+.weather_head p{
+    font: 100 14px/1 "Roboto",Arial,sans-serif;
+    color: #333;
+    margin: 0;
+}
+.weather1_detail
+{
+    background-color: #fff;
+}
+.weather2
+{
+    background-color: white;
+    border: 1px solid lightgrey;
+    padding: 3%;
+}
+.weather3
+{
+    border-radius: 5px 5px 0px 0px;
+    padding: 3%;
+
+    background-image: -webkit-gradient(linear,right bottom,left top,from(#168eea),to(#7abbec));
+    background-image: -webkit-linear-gradient(bottom right,#168eea,#7abbec);
+    background-image: linear-gradient(to top left,#168eea,#7abbec);
+    color: #333;
+}
+.weather4
+{
+    border-radius: 0px 0px 5px 5px;
+    padding: 3%;
+
+    background-image: -webkit-gradient(linear,right bottom,left top,from(#168eea),to(#7abbec));
+    background-image: -webkit-linear-gradient(bottom right,#168eea,#7abbec);
+    background-image: linear-gradient(to top left,#168eea,#7abbec);
+    color: #333;
+}
+
+.weather5
+{
+    background-color: white;
+    border: 1px solid lightgrey;
+    padding: 3%;
+    border-radius: 0px 0px 5px 5px;
+}
+.single_day
+{
+    width: 20%;
+    float: left;
+}
+.broadcast
+{
+    border: 10px inset cornflowerblue;
+    padding: 2% ;
+    margin: 5%;
+}
+.cities{
+    width: 12.5%;
+    float: left;
+    height: 70px;
+}
+
+.temp_condition
+{
+    width: 11.2%;
+    float: left;
+    height: 65px;
+    margin: 0% -15px;
+}
+.temp_condition .single-temp
+{
+    width: 100%;
+    height: 65px;
+}
