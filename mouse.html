@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function imgsmall(){
+            document.getElementById("image").style.width="100px";
+        }
+        function imglarge() {
+            document.getElementById("image").style.width="700px";
+
+        }
+        function picture() {
+document.getElementById("pic").src="golden%20temple.gif";``
+        }
+    </script>
+</head>
+<body>
+<img src="golden%20temple.gif" style="width: 500px" onmouseout="imgsmall()" onmouseover="imglarge()" id="image">
+<img id="pic">
+<input type="button" value="click me" onclick="picture()">
+</body>
+</html>
