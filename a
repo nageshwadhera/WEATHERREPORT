@@ -24,7 +24,12 @@ class Bank:
             print("Insufficient Parameters")
 
     def display_All(self):
-        print(self.Acc_No,self.name,self.balance,self.acc)
+        print("Acc No. \t\t Name \t\t Balance \t\t  Acc Type")
+        count = 0
+        for i in self.Acc_No:
+            print(self.Acc_No[count]," \t\t\t",self.name[count]," \t",self.balance[count]," \t\t\t",self.acc[count]," \n")
+            count += 1
+        print("*************************************************************************************************")
 
     def display(self,acc):
         count = 0
