@@ -16,10 +16,10 @@ class Bank:
             self.name.append(args[1])
             self.balance.append(args[2])
             self.acc.append(self.acc_type[args[3]-1])
-            print("\n\nHi,\nYour Account Number is: ",Acc_No)
-            print("Account Holder Name is: ",name)
-            print("Available Balance is: ",balance)
-            print("Account Type is: ",self.acc_type[index-1])
+            print("\n\nHi,\nYour Account Number is: ",args[0])
+            print("Account Holder Name is: ",args[1])
+            print("Available Balance is: ",args[2])
+            print("Account Type is: ",self.acc_type[args[3]-1])
         else:
             print("Insufficient Parameters")
 
@@ -100,7 +100,7 @@ def Add_Account():
     AccOpenBal = int(input("\nEnter Account Opening Balance: "))
     if AccOpenBal < 0:
         print("Can't open account with negative balance: ")
-        
+        return()
     AccType = int(input("\nEnter Account Type: \n1.) For Savings\n2.) For Current\n3.) For Credit: "))
     global abc
     abc = Bank(AccNum, AccName, AccOpenBal, AccType)
