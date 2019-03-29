@@ -1,0 +1,156 @@
+#App Name = Bank 1.0.0
+#Author = Nagesh Kumar
+#created on 29/03/2019
+#Class to perform specific operations according to the user
+class Bank:
+    Acc_No = []
+    name = []
+    balance = []
+    acc_type = ["Savings", "Current", "Credit"]
+    acc = []
+    def __init__(self,*args):
+        if len(args) == 0:
+            "blank obj"
+        elif len(args) ==4:
+            self.Acc_No.append(args[0])
+            self.name.append(args[1])
+            self.balance.append(args[2])
+            self.acc.append(self.acc_type[args[3]-1])
+            print("\n\nHi,\nYour Account Number is: ",Acc_No)
+            print("Account Holder Name is: ",name)
+            print("Available Balance is: ",balance)
+            print("Account Type is: ",self.acc_type[index-1])
+        else:
+            print("Insufficient Parameters")
+
+    def display_All(self):
+        print(self.Acc_No,self.name,self.balance,self.acc)
+
+    def display(self,acc):
+        count = 0
+        flag = 0
+        for i in self.Acc_No:
+            if i == acc:
+                print("\n\nAccount No.= ", self.Acc_No[count],"\nName of the holder= ",self.name[count],"\nAvailable Balance= ",self.balance[count],"\nAccount Type= ",self.acc[count])
+                flag = 1 
+            count += 1
+        if not flag:
+            print("\n\nNo Such Account Present")
+    def widr_mon(self,acc):
+        count = 0
+        flag = 0
+        for i in self.Acc_No:
+            if i == acc:
+                flag = 1
+                money = int(input("\nHow much you want to Withdraw?: "))
+                if money > self.balance[count]:
+                    print("\nInsufficient Balance")
+                    break;
+                self.balance[count] -= money
+                print("\n\nAccount Balance after transaction is = ", self.balance[count])
+            count += 1
+        if not flag:
+            print("\n\nNo Such Account Present")
+    def dep_mon(self,acc):
+        count = 0
+        flag = 0
+        for i in self.Acc_No:
+            if i == acc:
+                flag = 1
+                money = int(input("\nHow much you want to deposit?: "))
+                self.balance[count] += money
+                print("\n\nAccount Balance after transaction is = ", self.balance[count])
+            count += 1
+        if not flag:
+            print("\n\nNo such Account Present")
+    def rem_acc(self):
+        self.Acc_No.clear()
+        self.name.clear()
+        self.acc.clear()
+        self.balance.clear()
+        print(self.Acc_No)
+
+#End of Class
+
+
+
+#Main Menu that will display all possible options
+a = 7 
+def MainMenu():
+    print('''\n1.) Add Account
+    2.) Show Account
+    3.) Withdraw Money
+    4.) Deposit Money
+    5.) Show All Accounts
+    6.) Remove All Accounts
+    7.) Exit''')
+    global a
+    a = int(input("\nEnter choice: "))
+    
+#End of Main Function
+
+
+
+#Functions to Call class According to the option in Main Menu    
+abc = 1
+def Add_Account():
+    global AccNum
+    AccNum += 1
+    AccName = input("\nEnter Account Holder Name: ")
+    AccOpenBal = int(input("\nEnter Account Opening Balance: "))
+    if AccOpenBal < 0:
+        print("Can't open account with negative balance: ")
+        
+    AccType = int(input("\nEnter Account Type: \n1.) For Savings\n2.) For Current\n3.) For Credit: "))
+    global abc
+    abc = Bank(AccNum, AccName, AccOpenBal, AccType)
+    
+def Show_Account():
+    abc = Bank()
+    S_AccNum = int(input("Enter Account Number: "))
+    abc.display(S_AccNum)
+    
+def Withdraw_Money():
+    abc = Bank()
+    S_AccNum = int(input("Enter Account Number: "))
+    abc.widr_mon(S_AccNum)
+
+def Deposit_Money():
+    abc = Bank()
+    S_AccNum = int(input("Enter Account Number: "))
+    abc.dep_mon(S_AccNum)
+
+def Show_All_Account():
+    abc = Bank()
+    abc.display_All()
+    
+def remove_Acc():
+    abc = Bank()
+    abc.rem_acc()
+
+#End of Functions call
+    
+
+#Starting point of the roject
+MainMenu()
+AccNum = 10000   #Static Starting Account Number for Everyone
+
+
+
+#Iterator to call functions
+while a < 7:
+    if a == 1:
+        Add_Account()
+    elif a == 2:
+        Show_Account()
+    elif a == 3:
+        Withdraw_Money()
+    elif a == 4:
+        Deposit_Money()
+    elif a == 5:
+        Show_All_Account()
+    elif a == 6:
+        remove_Acc()
+    MainMenu()
+#End of Iterator
+
